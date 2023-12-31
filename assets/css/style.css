@@ -60,3 +60,17 @@ h1{
 .selected{
     background-color: rgba(69, 131, 134, 0.76);
 }
+
+@media(max-width: 700px){
+    body{
+        text-align: center;
+    }
+    .container{
+        height: 600px;
+        width: 320px;
+    }
+    h1{
+        font-size: 1.4em;
+        margin: 20px;
+    }
+}

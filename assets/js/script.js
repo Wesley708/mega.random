@@ -8,8 +8,8 @@ function generate(){
     principal.innerHTML = '';
     var randomAraray = [];
     while(randomAraray.length <= 5){
-        var random = Math.floor(Math.random()*60);
-        if(!randomAraray.includes(random)){
+        var random = Math.floor(Math.random()*61);
+        if(!randomAraray.includes(random) && random != 0){
             randomAraray.push(random);
         }
 
