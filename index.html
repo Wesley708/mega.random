@@ -9,12 +9,25 @@
     <title>Números Mega Sena</title>
 </head>
 <body>
-    <h1>Gerador de números aleatóreos para a Mega Sena!</h1>
-    <div id="pricipal" class="container">
+    <div class="menu">
+        <h2>Jogos</h2>
+        <img src="assets/img/sena.png" alt="" onclick="mega()">
+        <p>Mega</p>
+        <img src="assets/img/quina.png" alt="" onclick="quina()">
+        <p>Quina</p>
+        <img src="assets/img/lotofacil.png" alt="" onclick="lotofacil()">
+        Lotofacil
+        <img src="assets/img/lotomania.png" alt="" onclick="lotomania()">
+        <p>Lotomania</p>
     </div>
-    <button class="generate" onclick="generate()">Gerar!</button>
-    <div class="generated-numbers">
+    <div class="container">
+        <h1>Gerador de números aleatóreos para a Mega Sena!</h1>
+        <div id="principal" class="sena-box shadow">
+        </div>
+        <button class="generate background-sena shadow" onclick="generate('mega')">Gerar!</button>
+        <div class="generated-numbers shadow">
         
+        </div>
     </div>
 </body>
 <script src="assets/js/script.js"></script>
