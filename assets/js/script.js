@@ -21,9 +21,9 @@ function generateScreen(jogo){
     var drawnNumbers = 0;
     switch(jogo){
         case 'Mega Sena':
-            background = 'background-mania';
-            generate = 'mania';
-            box = 'mania-box';
+            background = 'background-sena';
+            generate = 'mega';
+            box = 'sena-box';
             totalNumbers = 60;
             drawnNumbers = 6;
         break;
