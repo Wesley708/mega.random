@@ -4,7 +4,6 @@ let container = document.querySelector('.container');
 let principal = document.querySelector('#principal');
 
 
-
 let generatedNumbers = document.querySelector('.generated-numbers');
 
 for(i = 1; i <= 60; i++){
@@ -12,62 +11,55 @@ for(i = 1; i <= 60; i++){
 };
 
 
+function generateScreen(jogo){
 
-function mega(){
-    container.innerHTML = '';
-    container.innerHTML = `<h1>Gerar números aleatóreos para a Mega Sena</h1> <div id="principal" class="box-quina shadow">
-    </div>`;
-    principal = document.querySelector('#principal');
-    principal.innerHTML = '';
-    for(i = 1; i <= 60; i++){
-        principal.classList.add('sena-box')
-        principal.innerHTML += `<div class="number">${i}</div>`;
-    };
-    container.innerHTML += `<button class="generate background-sena shadow" onclick="generate('mega')">Gerar!</button>
-    <div class="generated-numbers background-quina shadow">`;
-};
+    container.innerHTML ='';
+    var background = '';
+    var generate = '';
+    var box = '';
+    var totalNumbers = 0;
+    var drawnNumbers = 0;
+    switch(jogo){
+        case 'Mega Sena':
+            background = 'background-mania';
+            generate = 'mania';
+            box = 'mania-box';
+            totalNumbers = 60;
+            drawnNumbers = 6;
+        break;
+        case 'Quina':
+            background = 'background-quina';
+            generate = 'quina';
+            box = 'quina-box';
+            totalNumbers = 80;
+            drawnNumbers = 5;
+        break;
+        case 'Loto Fácil':
+            background = 'background-facil';
+            generate = 'facil';
+            box = 'facil-box';
+            totalNumbers = 25;
+            drawnNumbers = 15;
+        break;
+        case 'Loto Mania':
+            background = 'background-mania';
+            generate = 'mania';
+            box = 'mania-box';
+            totalNumbers = 100;
+            drawnNumbers = 50;
+        break;
+    }
+        container.innerHTML = `<div id="principal"  class=""></div>`;
 
+        var principal = document.querySelector('#principal');
 
-function quina(){
-    container.innerHTML = '';
-    container.innerHTML = `<h1>Gerar números aleatóreos para a Quina</h1> <div id="principal" class="box-quina shadow">
-    </div>`;
-    principal = document.querySelector('#principal');
-    principal.innerHTML = '';
-    for(i = 1; i <= 80; i++){
-        principal.classList.add('quina-box')
-        principal.innerHTML += `<div class="number">${i}</div>`;
-    };
-    container.innerHTML += `<button class="generate background-quina shadow" onclick="generate('quina')">Gerar!</button>
-    <div class="generated-numbers background-quina shadow">`;
-};
-
-function lotofacil(){
-    container.innerHTML = '';
-    container.innerHTML = `<h1>Gerar números aleatóreos para a Loto Fácil</h1> <div id="principal" class="box-quina shadow">
-    </div>`;
-    principal = document.querySelector('#principal');
-    principal.innerHTML = '';
-    for(i = 1; i <= 25; i++){
-        principal.classList.add('facil-box')
-        principal.innerHTML += `<div class="number">${i}</div>`;
-    };
-    container.innerHTML += `<button class="generate background-facil shadow" onclick="generate('facil')">Gerar!</button>
-    <div class="generated-numbers background-quina shadow">`;
-};
-
-function lotomania(){
-    container.innerHTML = '';
-    container.innerHTML = `<h1>Gerar números aleatóreos para a Loto Mania</h1> <div id="principal" class="box-quina shadow">
-    </div>`;
-    principal = document.querySelector('#principal');
-    principal.innerHTML = '';
-    for(i = 1; i <= 100; i++){
-        principal.classList.add('mania-box')
-        principal.innerHTML += `<div class="number">${i}</div>`;
-    };
-    container.innerHTML += `<button class="generate background-mania shadow" onclick="generate('mania')">Gerar!</button>
-    <div class="generated-numbers shadow">`;
+        for(i = 1; i <= totalNumbers; i++){
+            principal.classList.add(box)
+            principal.innerHTML += `<div class="number">${i}</div>`;
+        };
+        container.innerHTML += `<button class="generate ${background} shadow" onclick="generate('${generate}')">Gerar!</button>
+        <div class="generated-numbers shadow">`;
+        container.innerHTML += `<h1>Gerar números aleatóreos para a ${jogo}!</h1>`;
 };
 
 function generate(jogo){
