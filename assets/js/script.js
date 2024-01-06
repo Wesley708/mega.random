@@ -49,7 +49,10 @@ function generateScreen(jogo){
             drawnNumbers = 50;
         break;
     }
-        container.innerHTML = `<div id="principal"  class=""></div>`;
+
+        container.innerHTML += `<h1>Gerar números aleatóreos para a ${jogo}!</h1>`;
+
+        container.innerHTML += `<div id="principal"  class=""></div>`;
 
         var principal = document.querySelector('#principal');
 
@@ -59,7 +62,6 @@ function generateScreen(jogo){
         };
         container.innerHTML += `<button class="generate ${background} shadow" onclick="generate('${generate}')">Gerar!</button>
         <div class="generated-numbers shadow">`;
-        container.innerHTML += `<h1>Gerar números aleatóreos para a ${jogo}!</h1>`;
 };
 
 function generate(jogo){
