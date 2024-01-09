@@ -15,14 +15,14 @@
 }
 
 body{
-    display: flex;
+    display: grid;
+    grid-template-columns: 90px auto;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 100vw;
+    /* justify-content: center; */
     height: 100vh;
+    width: 100vw;
+    min-height: 100vh;
     background-color: rgba(25, 45, 88, 0.159);
-    flex-direction: row;
 }
 
 .sena-box{
@@ -115,7 +115,7 @@ h1{
 }
 
 .menu{
-    width: 7%;
+    width: 100%;
     height: 100%;
     background-color:rgba(0, 0, 0, 0.603) ;
     display: flex;
@@ -129,9 +129,16 @@ h1{
     margin: 20px;
 }
 
-.menu img{
+.box-menu img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 60px;
+    height: 60px;
     margin: 10px;
+}
+.box-menu p{
+    text-align: center;
 }
 
 .menu img:hover{
@@ -170,19 +177,67 @@ h1{
 }
 @media(max-width: 700px){
     body{
+        display: flex;
+        flex-direction: column;
+        height: auto;
         text-align: center;
     }
     .sena-box{
-        height: 590px;
-        width: 320px;
+        display: grid;
+        height: auto;
+        width: 100%;
+        height: auto;
+        grid-template-columns: auto auto auto auto auto auto;
+    }
+    .quina-box{
+        display: grid;
+        width: 100%;
+        grid-template-columns: auto auto auto auto auto auto auto auto;
+        height: auto;
+    }
+    .facil-box{
+        display: grid;
+        width: 100%;
+        grid-template-columns: auto auto auto auto auto;
+        height: auto;
+    }
+    .mania-box{
+        display: grid;
+        width: 100%;
+        grid-template-columns: auto auto auto auto auto auto auto auto;
+        height: auto;
     }
     h1{
         font-size: 1.4em;
         margin: 20px;
     }
     .menu{
+    width: 100%;    
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    }
+    .box-menu{
+        height: 100%;
+    }
+    /* #principal{
+        display: grid;
         
-    display: none;
+    } */
+    .box-menu img{
+        height: 50px;
+    }
+    .number{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 35px;
+        height: 35px;
+    }
+    .menu h2{
+        display: none;
     }
 }
 .shadow{

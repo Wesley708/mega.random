@@ -6,9 +6,11 @@ let principal = document.querySelector('#principal');
 
 let generatedNumbers = document.querySelector('.generated-numbers');
 
-for(i = 1; i <= 60; i++){
-    principal.innerHTML += `<div class="number">${i}</div>`;
-};
+generateScreen('Mega Sena');
+
+// for(i = 1; i <= 60; i++){
+//     principal.innerHTML += `<div class="number">${i}</div>`;
+// };
 
 
 function generateScreen(jogo){
