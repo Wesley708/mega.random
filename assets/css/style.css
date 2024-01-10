@@ -5,6 +5,7 @@
     --color-quina: #4c3487;
     --color-facil: #95018B;
     --color-mania: #E96B00;
+    --dark-gray: rgba(0, 0, 0, 0.603);
 }
 
 *{
@@ -107,17 +108,18 @@ h1{
 .generated-numbers{
     display: flex;
     flex-direction: row;
-    background-color: rgba(83, 83, 83, 0.363);
+    background-color: var(--dark-gray);
     border-radius: 5px;
     padding: 5px;
     max-width: 620px;
     flex-wrap: wrap;
+    margin-bottom: 10px;
 }
 
 .menu{
     width: 100%;
     height: 100%;
-    background-color:rgba(0, 0, 0, 0.603) ;
+    background-color: var(--dark-gray);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -152,6 +154,19 @@ h1{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+.container h1{
+    font-weight: 700;
+    text-align: center;
+    width: 620px;
+    background-color: var(--dark-gray);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    border-radius: 5px;
+    margin-bottom: 15px;
 }
 
 .quina-box{
@@ -238,6 +253,13 @@ h1{
     }
     .menu h2{
         display: none;
+    }
+    .container h1{
+        width: 100%;
+        height: 40px;
+        font-weight: 400;
+        font-size: 16px;
+        padding: 10px;
     }
 }
 .shadow{

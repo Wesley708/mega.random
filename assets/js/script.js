@@ -115,7 +115,7 @@ function generate(jogo){
     generatedNumbers = document.querySelector('.generated-numbers');
 
     function exit(element){    
-        generatedNumbers.innerHTML += `<div class="exit">${element}</div>`;
+        generatedNumbers.innerHTML += `<div class="exit ${background} shadow">${element}</div>`;
     }
     randomAraray.forEach(exit);
 };
