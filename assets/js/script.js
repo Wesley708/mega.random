@@ -63,7 +63,7 @@ function generateScreen(jogo){
             principal.innerHTML += `<div class="number">${i}</div>`;
         };
         container.innerHTML += `<button class="generate ${background} shadow" onclick="generate('${generate}')">Gerar!</button>
-        <div class="generated-numbers shadow">`;
+        <div id="generated-numbers" class="generated-numbers shadow">`;
 };
 
 function generate(jogo){
@@ -117,6 +117,11 @@ function generate(jogo){
     function exit(element){    
         generatedNumbers.innerHTML += `<div class="exit ${background} shadow">${element}</div>`;
     }
-    randomAraray.forEach(exit);
+
+    let asc = randomAraray.sort(function(a, b){
+        return a - b;
+    });
+
+    asc.forEach(exit);
 };
 

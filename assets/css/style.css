@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:display=swap');
 
 :root{
     --color-sena: #20986A;
     --color-quina: #4c3487;
-    --color-facil: #95018B;
+    --color-facil: #984192;
     --color-mania: #E96B00;
     --dark-gray: rgba(0, 0, 0, 0.603);
 }
@@ -12,7 +12,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Poppins, sans-serif;
+    font-family: Roboto, sans-serif;
 }
 
 body{
@@ -108,7 +108,7 @@ h1{
 .generated-numbers{
     display: flex;
     flex-direction: row;
-    background-color: var(--dark-gray);
+    background-color: rgba(83, 83, 83, 0.363);
     border-radius: 5px;
     padding: 5px;
     max-width: 620px;
@@ -156,7 +156,7 @@ h1{
     flex-direction: column;
 }
 .container h1{
-    font-weight: 700;
+    font-weight: 500;
     text-align: center;
     width: 620px;
     background-color: var(--dark-gray);
